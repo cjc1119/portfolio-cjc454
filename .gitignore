@@ -1,3 +1,128 @@
+# == == == == Rebased gitignore on July 18, 2024 == == == ==
+
+# This is a Python project .gitignore file.
+# This file is used to tell git which files or directories to ignore in a Python project.
+# It is a good practice to keep this file in the root of your repository.
+# The reason for ignoring certain files is to prevent them from being tracked by git,
+# which can include temporary files, compiled files, or files that contain sensitive information.
+
+# == Python 
+__pycache__/
+# the "__" prefix indicates that this is a special directory used by Python to store bytecode files.
+# the "__" suffix indicates that this is a directory, not a file.
+# the "/" at the end indicates that this is a directory, not a file.
+*.py[cod]
+*.pyo
+*.pyd
+*.pdb   
+*$py.class
+# This is what the above lines do:
+# - Ignore Python bytecode files and directories.
+# - Ignore compiled Python files, which are not needed in version control.
+# - Ignore Python debug files, which are not needed in version control.
+# - Ignore Python class files, which are not needed in version control.
+# - Ignore Python module files, which are not needed in version control.
+
+
+# == Jupyter Notebook checkpoints ==
+.ipynb_checkpoints/
+# This is what the above line does:
+# - Ignore Jupyter Notebook checkpoints, which are not needed in version control.
+# A checkpoint is a saved state of a Jupyter Notebook that is automatically created by Jupyter when you save your notebook.
+# The permanent file that should be committed is the .ipynb file itself, which contains the code, outputs, and metadata of the notebook.
+
+
+# == CSV snapshots & raw data dumps ==
+*.csv
+# This is what the above line does:
+# - Ignore CSV files, which are often used for data storage and analysis.
+# These files can be large and may contain sensitive information, so it is a good practice to ignore them in version control.
+# If you need to share data with others, consider using a separate data repository or a data sharing service.
+
+
+# == Logs ==
+*.log
+# This is what the above line does:
+# - Ignore log files, which are often used for debugging and monitoring purposes.
+# Log files can grow large and may contain sensitive information, so it is a good practice to ignore them in version control.
+# If you need to keep logs, consider using a logging framework that allows you to configure log levels and output formats.
+# Logs are created by the user's code and can be used to track the execution of the code, errors, and other events.
+# To view logs, you can use a logging framework like Python's built-in logging module or a third-party library like Loguru.
+
+
+# == MacOS Metadata ==
+.DS_Store
+# This is what the above line does:
+# - Ignore .DS_Store files, which are created by macOS to store custom attributes of a folder.
+# These files are not needed in version control and can be safely ignored.
+
+
+# == Windows Metadata ==
+Thumbs.db
+# This is what the above line does:
+# - Ignore Thumbs.db files, which are created by Windows to store thumbnail images of files in a folder.
+# These files are not needed in version control and can be safely ignored.
+
+
+# == Virtual environments ==
+# Ignore virtual environment directories, which are used to isolate Python packages and dependencies for a project.
+.env/
+# the / at the end indicates that this is a directory, not a file.
+.env
+# are .env/ and .env different
+# directories? Yes, .env/ is a directory, while .env is a file.
+# The .env file is used to store environment variables for a project, such as API keys, database URLs, and other configuration settings.
+# It is a good practice to keep this file in the root of your repository, but it should not be tracked by git.
+# The following lines are common names for virtual environment directories:
+.venv/
+env/
+venv/
+ENV/
+env.bak/
+# This is what the above lines do:
+# ".venv/" is a common name for a virtual environment directory created by tools like pipenv or poetry.
+# "env/" and "venv/" are common names for virtual environment directories created by tools like virtualenv or venv.
+# "ENV/" is a common name for a virtual environment directory created by tools like conda.
+# "env.bak/" is a common name for a backup of a virtual environment directory.
+# These directories contain the installed packages and dependencies for a project, and they can be large and contain sensitive information.
+
+# == Python package distribution ==
+# Ignore directories and files related to Python package distribution, which are used to create and distribute Python packages.
+.Python/
+.python-version
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+*.egg-info/
+# This is what the above lines do:
+# - ".Python/" is a directory created by tools like pipenv or poetry to store the Python interpreter and packages for a project.
+# - ".python-version" is a file created by tools like pyenv to specify the Python version for a project.
+# - "build/", "develop-eggs/", "dist/", "downloads/", "eggs/", ".eggs/", and "*.egg-info/" are directories and files created by tools like setuptools or distutils to build and distribute Python packages.
+# Downloads are often temporary files that are not needed in version control, and eggs are a legacy format for Python packages that is no longer recommended.
+# Examples of download files include:
+# - "downloads/" is a directory where downloaded files are stored.
+# - "eggs/" is a directory where Python eggs are stored.
+# - ".eggs/" is a directory where Python eggs are stored, but it is ignored in version control.
+# - "*.egg-info/" is a directory where Python egg metadata is stored, but it is ignored in version control.
+# A python egg is a distribution format for Python packages that is no longer recommended. It is a legacy format that has been replaced by the wheel format.
+
+
+# == VS Code settings ==
+.vscode/
+# This is what the above line does:
+# - Ignore .vscode/ directory, which is created by Visual Studio Code to store workspace settings and configurations.
+# This directory contains settings specific to the project, such as editor preferences, extensions, and debugging configurations.
+# It is a good practice to keep this directory in version control, but it should not contain user-specific settings or configurations.
+
+
+
+# == == == == Original Python .gitignore template == == == ==
+
+# This is a template for Python projects that includes common files and directories to ignore. Populated by default when creating a new Python project.
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
